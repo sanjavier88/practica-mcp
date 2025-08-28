@@ -9,6 +9,9 @@
 
 body {
     font-family: var(--font-family);
+    margin: 0;
+    background-color: #fff;
+    /* overflow: hidden; */ /* Prevent scrolling */
 }
 
 .btn-primary {
@@ -37,22 +40,17 @@ body {
 }
 
 .hero-section {
-    background-color: var(--light-blue-bg);
+    background-color: #ECFEFF;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150%;
-    height: 150%;
-    background-color: #e9eff5;
-    border-radius: 50%;
-    transform: translate(-30%, -60%) rotate(-15deg);
-    z-index: 0;
+.hero-background {
+    background-image: url('../assets/fondo-fondo.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .text-content, .image-content {
@@ -62,21 +60,6 @@ body {
 
 .image-content {
     min-height: 450px;
-}
-
-.hero-image-fused {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/hero-image.png');
-    background-size: contain;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    z-index: 2;
-    mask-image: linear-gradient(to bottom, black 40%, transparent 90%);
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 90%);
 }
 
 .phone-icon-background {
@@ -89,19 +72,6 @@ body {
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
-/* --- Decorative Elements --- */
-.deco-dot-grid, .deco-circle-1, .deco-circle-2, .deco-icon-1, .deco-icon-2 {
-    position: absolute;
-    z-index: 1;
-}
-
-.deco-dot-grid { top: 25%; left: 0; width: 80px; height: 80px; background-image: radial-gradient(circle, #ced4da 2px, transparent 2px); background-size: 15px 15px; }
-.deco-circle-1 { top: 55%; left: 5%; width: 15px; height: 15px; background-color: var(--primary-color); border-radius: 50%; }
-.deco-circle-2 { top: 30%; right: 5%; width: 25px; height: 25px; background-color: #a2d2ff; border-radius: 50%; }
-.deco-icon-1 { top: 10%; left: 15%; width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 15px; transform: rotate(-15deg); display: flex; align-items: center; justify-content: center; }
-.deco-icon-1 img { width: 30px; filter: brightness(0) invert(1); }
-.deco-icon-2 { bottom: 10%; right: 10%; width: 40px; height: 40px; background-color: #a2d2ff; color: var(--primary-color); font-size: 24px; font-weight: bold; border-radius: 10px; transform: rotate(15deg); display: flex; align-items: center; justify-content: center; }
 
 .doctor-card {
     position: absolute;
@@ -121,4 +91,350 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.rounded-corners-10 {
+    border-radius: 10px;
+}
+
+.service-card {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-icon-background {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card-body {
+    padding: 1rem 0 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-body h5 {
+    margin-bottom: 0.5rem;
+}
+
+.service-card-body p {
+    flex-grow: 1;
+}
+
+
+.btn-light-purple {
+    background-color: #F3E5F5;
+    color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-light-purple:hover {
+    background-color: #E1BEE7;
+    color: var(--primary-color);
+}
+
+.main-full-height {
+    min-height: 80vh;
+}
+
+.emergency-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2rem 2rem 2rem;
+    background-color: #fff;
+}
+
+.emergency-content {
+    display: flex;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.emergency-image {
+    position: relative;
+    flex: 1;
+    margin-top: 0; /* Removed negative margin */
+    height: 500px;
+}
+
+.emergency-image .image-background {
+    position: absolute;
+    top: -15px; /* Adjusted */
+    left: -15px; /* Adjusted */
+    width: 100%;
+    height: 100%;
+    background-color: #e0f7fa;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.emergency-image img {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.emergency-text {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.emergency-text h6 {
+    color: #6A44D2;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.emergency-text h3 { /* Target h3 instead of h2 */
+    font-size: 2.5rem; /* Adjusted font size */
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.emergency-text p {
+    color: #64748b;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.emergency-text .btn {
+    background-color: #6A44D2;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.emergency-text .btn:hover {
+    background-color: #5838b0;
+}
+
+/* Especialidades Section */
+.especialidades-section {
+    background-color: #f8f9fa; /* Light background color from the image */
+    padding: 3rem 0; /* Reduced padding */
+    border-radius: 20px; /* Rounded corners for the whole section */
+    margin: 1rem auto; /* Reduced margin */
+    max-width: 1200px; /* Limit width */
+}
+
+.especialidades-header {
+    margin-bottom: 2rem; /* Reduced margin */
+    padding: 0 1rem; /* Reduced padding */
+}
+
+.features-label {
+    color: #6A44D2; /* Primary color */
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.especialidades-title {
+    font-size: 2.5rem; /* Reduced font size */
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.especialidades-description {
+    color: #64748b;
+    font-size: 1rem; /* Reduced font size */
+    line-height: 1.6;
+    max-width: 700px; /* Limit width for readability */
+    margin: 0 auto;
+}
+
+.especialidades-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; /* Reduced gap */
+    padding: 0 1rem; /* Reduced padding */
+    justify-items: center; /* Center cards within their grid cells */
+}
+
+@media (min-width: 768px) {
+    .especialidades-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
+    }
+}
+
+.card-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem; /* Reduced padding */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the start */
+    text-align: left;
+    height: 100%; /* Allow card to grow */
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: #e0f7fa; /* Light blue background for icon */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-placeholder {
+    width: 30px; /* Placeholder size for icon */
+    height: 30px;
+    background-color: #6A44D2; /* Primary color for placeholder */
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 1.3rem; /* Reduced font size */
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #64748b;
+    font-size: 0.9rem; /* Reduced font size */
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-content {
+        margin-top: 2rem;
+        min-height: 350px; /* Increased height slightly */
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-end; /* Push content to the bottom */
+        align-items: center; /* Center horizontally */
+    }
+    .doctor-card {
+        position: relative; /* Change from absolute/static */
+        bottom: auto;
+        left: auto;
+        margin-top: 1rem;
+        width: 90%; /* Make it responsive */
+        max-width: 300px; /* Add a max-width */
+    }
+    .deco-dot-grid, .deco-circle-1, .deco-circle-2, .deco-icon-1, .deco-icon-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .emergency-section {
+        min-height: auto; /* Remove fixed height */
+        padding: 2rem 1rem; /* Adjust padding */
+    }
+    .emergency-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .emergency-image {
+        margin-top: 0;
+    }
+    .emergency-text {
+        padding-left: 0;
+    }
+    .emergency-text h3 { /* Target h3 */
+        font-size: 2rem;
+    }
+    .service-card {
+        margin-top: 0; /* Adjusted from 2rem */
+    }
+    .buttom-service {
+        margin-top: 2rem;
+    }
+    .especialidades-cards {
+        grid-template-columns: 1fr;
+    }
+    .form-section .row {
+        flex-direction: column;
+    }
+    .form-section .col-md-6 {
+        width: 100%;
+    }
+}
+
+.service-card-img-contain {
+    object-fit: contain;
+}
+
+.emergency-image-small {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.inline-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 10px;
+    object-fit: contain;
 }
