@@ -15,8 +15,8 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: #6A44D2;
+    border-color: #6A44D2;
 }
 
 .btn-primary:hover {
@@ -30,6 +30,12 @@ body {
     background-color: var(--primary-color);
     border-radius: 2px;
 }
+
+.navbar-nav .nav-item {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
 
 /* Custom Font Weights */
 .display-4,
@@ -248,7 +254,7 @@ body {
 
 /* Especialidades Section */
 .especialidades-section {
-    background-color: #f8f9fa; /* Light background color from the image */
+    background-color: #DBDEFA; /* Light background color from the image */
     padding: 3rem 0; /* Reduced padding */
     border-radius: 20px; /* Rounded corners for the whole section */
     margin: 1rem auto; /* Reduced margin */
@@ -300,7 +306,7 @@ body {
 }
 
 .card-item {
-    background-color: #fff;
+    background-color: #DBDEFA;
     border-radius: 15px;
     padding: 1.5rem; /* Reduced padding */
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -437,4 +443,76 @@ body {
     border-radius: 15px;
     margin: 10px;
     object-fit: contain;
+}
+
+/* Cellphone Modal Styles */
+.modal-cellphone .modal-content {
+    border: 12px solid #000;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    background: #fff;
+}
+
+.modal-cellphone .modal-header {
+    border-bottom: none;
+    height: 40px;
+}
+
+.modal-cellphone .modal-body {
+    background-image: url('../assets/bot-new2.png');
+    background-size: contain;
+    background-position: center;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    animation: moveBackground 20s linear infinite;
+}
+
+.modal-cellphone .modal-footer {
+    border-top: none;
+    height: 60px;
+}
+
+@keyframes moveBackground {
+  0% { background-position: center 0%; }
+  50% { background-position: center 100%; }
+  100% { background-position: center 0%; }
+}
+
+/* Mobile Hero Section */
+.hero-section-mobile {
+    position: relative;
+    background-image: url('../assets/nuevo-fondo.png');
+    background-size: cover;
+    background-position: 85% 50%; /* Try to center the woman */
+    background-repeat: no-repeat;
+    color: #333; /* Dark text */
+    text-align: center;
+    padding: 2rem 1rem;
+    z-index: 1;
+}
+
+.hero-section-mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white overlay */
+    z-index: -1;
+    border-radius: 10px; /* To match the parent's border-radius */
+}
+
+.hero-section-mobile .text-content-mobile h1,
+.hero-section-mobile .text-content-mobile p {
+    color: #000;
+}
+
+.hero-section-mobile .text-muted {
+    color: #222 !important;
+}
+
+.hero-section-mobile .contact-info-mobile {
+    margin-top: 2rem;
+    display: inline-block;
 }
