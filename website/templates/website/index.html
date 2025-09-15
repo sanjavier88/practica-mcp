@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +19,8 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand d-flex align-items-center" href="/">
-                        <img src="assets/logo.svg" alt="Dentalist Logo" width="30" height="30" class="me-2">
+                    <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                        <img src="{% static 'website/assets/logo.svg' %}" alt="Dentalist Logo" width="30" height="30" class="me-2">
                         <span class="fs-4 logo-text">Dentalist.</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,20 +29,20 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Especialidades</a>
+                                <a class="nav-link" href="{% url 'services' %}">Especialidades</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="atencion.html">Acerca de Nosotros</a>
+                                <a class="nav-link" href="{% url 'atencion' %}">Acerca de Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="formulario-cita.html">Contáctanos</a>
+                                <a class="nav-link" href="{% url 'formulario-cita' %}">Contáctanos</a>
                             </li>
                             <li class="nav-item d-lg-none">
-                                <a href="formulario-cita.html" class="btn btn-primary">Agenda tu cita</a>
+                                <a href="{% url 'formulario-cita' %}" class="btn btn-primary">Agenda tu cita</a>
                             </li>
                         </ul>
                     </div>
-                    <a href="formulario-cita.html" class="btn btn-primary d-none d-lg-block">Agenda tu cita</a>
+                    <a href="{% url 'formulario-cita' %}" class="btn btn-primary d-none d-lg-block">Agenda tu cita</a>
                 </div>
             </nav>
         </header>
@@ -56,7 +57,7 @@
                             <!-- <button class="btn btn-primary btn-lg">Book an appointment</button> -->
                             <div class="d-flex align-items-center gap-3">
                                 <div class="phone-icon-background">
-                                    <img src="assets/phone.svg" alt="Phone" width="20" height="20">
+                                    <img src="{% static 'website/assets/phone.svg' %}" alt="Phone" width="20" height="20">
                                 </div>
                                 <div>
                                     <div class="text-muted small">URGENCIAS DENTALES 24H</div>
@@ -65,7 +66,7 @@
                                 </div>
                                 <div class="mb-4 d-flex align-items-center mt-3">
                                     <div class="phone-icon-background me-3 ">
-                                        <img src="assets/mensaje.png" alt="Email" width="30" height="30">
+                                        <img src="{% static 'website/assets/mensaje.png' %}" alt="Email" width="30" height="30">
 
                                     </div>
                                     <a href="mailto:jorge@hacku.com" class="text-decoration-none text-black">Email: Dentalist.com</a>
@@ -82,7 +83,7 @@
                         
 
                         <div class="doctor-card " >
-                            <img src="assets/perfil2.png" alt="Dr. Samantha Alice" class="rounded-corners-10">
+                            <img src="{% static 'website/assets/perfil2.png' %}" alt="Dr. Samantha Alice" class="rounded-corners-10">
                             <div>
                                 <div class="fw-500">Dra. Samantha Alice</div>
                                 <div class="text-muted small">Odontóloga</div>
@@ -101,7 +102,7 @@
                     <div class="contact-info-mobile">
                         <div class="d-flex align-items-center gap-3">
                             <div class="phone-icon-background">
-                                <img src="assets/phone.svg" alt="Phone" width="20" height="20">
+                                <img src="{% static 'website/assets/phone.svg' %}" alt="Phone" width="20" height="20">
                             </div>
                             <div>
                                 <div class="text-muted small">URGENCIAS DENTALES 24H</div>
@@ -110,9 +111,9 @@
                         </div>
                         <div class="d-flex align-items-center mt-3">
                             <div class="phone-icon-background me-3">
-                                <img src="assets/mensaje.png" alt="Email" width="30" height="30">
+                                <img src="{% static 'website/assets/mensaje.png' %}" alt="Email" width="30" height="30">
                             </div>
-                            <a href="mailto:jorge@hacku.com" class="text-decoration-none text-black">Email: Dentalist.com</a>
+                            <a href="mailto:practicaui25@gmail.com" class="text-decoration-none text-black">Email: Dentalist.com</a>
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de Nosotros - Dentalist</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -17,8 +18,8 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
-                        <img src="assets/logo.svg" alt="Dentalist Logo" width="30" height="30" class="me-2">
+                    <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                        <img src="{% static 'website/assets/logo.svg' %}" alt="Dentalist Logo" width="30" height="30" class="me-2">
                         <span class="fs-4 logo-text">Dentalist.</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,17 +28,17 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Nuestros Servicios</a>
+                                <a class="nav-link" href="{% url 'services' %}">Nuestros Servicios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="especialidades.html">Nuestra Filosofía</a>
+                                <a class="nav-link" href="{% url 'especialidades' %}">Nuestra Filosofía</a>
                             </li>
                             <li class="nav-item d-lg-none">
-                                <a href="formulario-cita.html" class="btn btn-primary">Agenda tu cita</a>
+                                <a href="{% url 'formulario-cita' %}" class="btn btn-primary">Agenda tu cita</a>
                             </li>
                         </ul>
                     </div>
-                    <!-- <a href="formulario-cita.html" class="btn btn-primary d-none d-lg-block border-0" style="background-color: #6A44D2;">Agenda tu cita</a> -->
+                    <!-- <a href="{% url 'formulario-cita' %}" class="btn btn-primary d-none d-lg-block border-0" style="background-color: #6A44D2;">Agenda tu cita</a> -->
                 </div>
             </nav>
         </header>
@@ -47,16 +48,16 @@
                 <div class="emergency-content">
                     <div class="emergency-image">
                         <div class="image-background"></div>
-                        <img src="paciente.png" alt="Paciente recibiendo tratamiento dental" class="emergency-image-small">
+                        <img src="{% static 'website/assets/paciente.png' %}" alt="Paciente recibiendo tratamiento dental" class="emergency-image-small">
                         <div class="d-flex justify-content-center mt-3 ">
-                            <img src="./assets/imagen6.jpg" alt="Paciente" class="inline-image">
-                            <img src="./assets/imagen8.jpg" alt="Paciente" class="inline-image">
+                            <img src="{% static 'website/assets/imagen6.jpg' %}" alt="Paciente" class="inline-image">
+                            <img src="{% static 'website/assets/imagen8.jpg' %}" alt="Paciente" class="inline-image">
                         </div>
                         <div class="d-flex justify-content-center mt-3" >
-                            <img src="assets/imagen2.jpg" alt="Paciente" class="inline-image mt-5">
-                            <img src="./assets/imagen3.jpeg" alt="Paciente" class="inline-image mt-5">
-                            <img src="./assets/imagen4.png" alt="Paciente" class="inline-image mt-5">
-                            <img src="./assets/imagen5.jpg" alt="Paciente" class="inline-image mt-5">
+                            <img src="{% static 'website/assets/imagen2.jpg' %}" alt="Paciente" class="inline-image mt-5">
+                            <img src="{% static 'website/assets/imagen3.jpeg' %}" alt="Paciente" class="inline-image mt-5">
+                            <img src="{% static 'website/assets/imagen4.png' %}" alt="Paciente" class="inline-image mt-5">
+                            <img src="{% static 'website/assets/imagen5.jpg' %}" alt="Paciente" class="inline-image mt-5">
                         </div>
                         <div class="d-flex justify-content-center mt-3">
                            
@@ -73,7 +74,7 @@
                         constante actualización, hemos crecido y modernizado nuestras instalaciones, incorporando tecnología avanzada para
                         ofrecer tratamientos en todas las áreas de la odontología. Hoy, seguimos fieles a nuestra misión: cuidar sonrisas con
                         calidez, profesionalismo y dedicación.</p>
-                        <a href="formulario-cita.html" class="btn btn-primary mt-3">Agenda tu cita</a>
+                        <a href="{% url 'formulario-cita' %}" class="btn btn-primary mt-3">Agenda tu cita</a>
                     </div>
                 </div>
             </section>
